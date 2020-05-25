@@ -1,0 +1,22 @@
+<div *ngIf="(todo$ | async) as todo; else loading">
+    <div class="btn-container">
+        <button class="btn btn-primary" (click)="mark()" [disabled]="todo.isDone">Mark as Done</button>
+        <button class="btn btn-secondary" (click)="onEditTask()" [disabled]="todo.isDone">Edit</button>
+        <button class="btn btn-danger" (click)="onDeleteTask()">Delete</button>
+    </div>
+
+    <div class="form-group">
+        <h3 [class.done]="todo.isDone">{{todo.taskName}}</h3>
+
+        <div class="form-control">
+            <input type="text" placeholder="task name" [ngModel]="todo.taskName" name="taskName" readonly/>
+        </div>
+
+        <div class="form-control">
+            <textarea placeholder="description" [ngModel]="todo.description" name="description" readonly>
+            </textarea>
+        </div>
+    </div>
+</div>
+
+<ng-template #loading>Loading…</ng-template>

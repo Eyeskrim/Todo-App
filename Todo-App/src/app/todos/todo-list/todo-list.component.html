@@ -1,0 +1,5 @@
+<div class="todo-list">
+    <app-todo-item *ngFor="let task of (todoService.todos | async)" 
+        [task]="task">
+    </app-todo-item>
+</div>

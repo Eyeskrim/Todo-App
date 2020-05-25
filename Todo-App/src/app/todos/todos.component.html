@@ -1,0 +1,13 @@
+<button class="btn" (click)="onAddNew()">Add New</button>
+
+<div class="todo-container">
+    <div class="col">
+        <hr>
+        <app-todo-list (taskWasSelected)="selectedTask = $event"></app-todo-list>
+    </div>
+    <div class="col todo-detail">
+        <router-outlet></router-outlet>
+        <!-- <app-todo-detail *ngIf="selectedTask; else infoText" [todo]="selectedTask"></app-todo-detail>
+        <ng-template #infoText><p><strong>Please select a task!</strong></p></ng-template> -->
+    </div>
+</div>

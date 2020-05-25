@@ -1,0 +1,8 @@
+.todo-list {
+    list-style: none;
+    list-style-position: inside;
+}
+
+.todo-active {
+    color: #A6ACAF;
+}

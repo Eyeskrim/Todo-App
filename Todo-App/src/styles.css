@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    color: white;
+    background: #17A589;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-danger {
+    background: #CB4335;
+}
+
+.btn-secondary {
+    background: #F1C40F;
+}
+
+.btn-container {
+    margin-bottom: 25px;
+}
+
+.form-group {
+    border: 1px solid #D0D3D4;
+    border-radius: 5px;
+    padding: 10px 20px 10px 10px;
+}
+
+.form-control {
+    margin:5px 0px 10px;
+}
+
+.form-control label {
+    font-weight: bold;
+    font-size: 0.9em;
+    /* margin-bottom: 10px; */
+}
+
+input, textarea {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #17A589;
+    width: 100%;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.done {
+    color: green;
+}
+
+:disabled {
+    background-color: #48C9B0;
+    cursor: not-allowed;
+}
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+}

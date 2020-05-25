@@ -1,0 +1,25 @@
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <div class="btn-container">
+        <button class="btn btn-primary" [disabled]="!this.todoForm.valid" type="submit">Save</button>
+        <button class="btn btn-danger" (click)="onCancel()" type="button">Cancel</button>
+    </div>
+
+    <div class="form-group">
+        <!-- <h3 [class.done]="todo.isDone">{{todo.task}}</h3> -->
+        <div class="form-control">
+            <label>Name</label>
+            <input [formControlName]="'name'" type="text" id="name" placeholder="task name" required />
+            <span *ngIf="this.todoForm.get('name').invalid && (this.todoForm.get('name').touched || this.todoForm.get('name').dirty)" 
+                    class="error-message">Please enter a valid value!
+            </span>
+        </div>
+        <div class="form-control">
+            <label>Description</label>
+            <textarea [formControlName]="'description'" id="description" placeholder="description" required>
+            </textarea>
+            <span *ngIf="this.todoForm.get('description').invalid && (this.todoForm.get('description').touched || this.todoForm.get('description').dirty)" 
+                    class="error-message">Please enter a valid value!
+            </span>
+        </div>
+    </div>
+</form>

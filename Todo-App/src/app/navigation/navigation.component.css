@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10%;
+    background: #17A589;
+    height: 20px;
+    /* box-sizing: border-box; */
+}
+
+li, a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+
+.navbar {
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.navbar li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover {
+    color: #0088a9;
+}
+
+.active {
+    background: #117A65;
+}

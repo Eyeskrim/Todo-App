@@ -1,0 +1,13 @@
+.todo-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    width: 80%;
+    padding: 10px;
+}
+
+.todo-detail {
+    margin-top: -35px;
+}
